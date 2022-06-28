@@ -37,11 +37,16 @@
             <li class="nav-item">
               <a class="nav-link" href="#contact">Review</a>
             </li>
+            <li>
+              <form class="d-flex" role="search">
+                <input class="form-control me-3" type="search" placeholder="Search" aria-label="Search" />
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
@@ -74,10 +79,12 @@
           <div class="col-md-4">
             <p>
               Six Tour & Travel merupakan website penyedia informasi tempat wisata dan juga berbagai macam kebutuhan wisata lainnya. Berikut ini beberapa kebutuhan wisata yang bisa lakukan menggunakan website Six Tour & Travel Travel antara
-              lain :
+              lain : 
               <ol>
-                <li>Pemesanan dan informasi lengkap mengenai transportasi seperi tiket bus mini, tiket pesawat, dan tiket kereta api.</li>
-              </ol> 
+                <li>
+                  Pemesanan dan informasi lengkap mengenai transportasi seperi tiket bus mini, tiket pesawat, dan tiket kereta api.
+                </li>
+              </ol>
             </p>
           </div>
         </div>
@@ -181,17 +188,17 @@
           <div class="col-md-6">
             <form>
               <div class="mb-4">
-                <label for="transportasi" class="form-label" style="font-family: 'Times New Roman', Times, serif">Select Transportation</label><br>
-                  <select name="status" id="transportasi">
+                <label for="transportasi" class="form-label" style="font-family: 'Times New Roman', Times, serif">Select Transportation</label><br />
+                <select name="status" id="transportasi">
                   <option value="pilih">Please Select Ticket Type</option>
                   <option value="tiket busmini">Tiket Bus Mini</option>
                   <option value="tiket pesawat">Tiket Pesawat</option>
                   <option value="tiket kereta api">Tiket Kereta Api</option>
-                  </select>
+                </select>
               </div>
               <div class="mb-4">
-                <label for="transportasi" class="form-label" style="font-family: 'Times New Roman', Times, serif">Select Destination</label><br>
-                  <select name="status" id="transportasi">
+                <label for="transportasi" class="form-label" style="font-family: 'Times New Roman', Times, serif">Select Destination</label><br />
+                <select name="status" id="transportasi">
                   <option value="pilih">Please Choose Your Destination</option>
                   <option value="bali">Bali</option>
                   <option value="danau toba">Danau Toba</option>
@@ -199,19 +206,29 @@
                   <option value="labuan bajo">Labuan Bajo</option>
                   <option value="semarang">Semarang</option>
                   <option value="yogyakarta">Yogyakarta</option>
-                  </select>
+                </select>
               </div>
               <div class="mb-4">
-                <label for="tanggal" class="form-label" style="font-family: 'Times New Roman', Times, serif">Choose Departure Schedule</label><br>
-                <input type="date" name="tanggal" id="tanggal">
+                <label for="tanggal" class="form-label" style="font-family: 'Times New Roman', Times, serif">Choose Departure Schedule</label><br />
+                <input type="date" name="tanggal" id="tanggal" />
               </div>
               <div class="mb-4">
                 <label for="name" class="form-label" style="font-family: 'Times New Roman', Times, serif">Full Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Type Your Full Name"/>
+                <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Type Your Full Name" />
               </div>
               <div class="mb-4">
                 <label for="email" class="form-label" style="font-family: 'Times New Roman', Times, serif">Email</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Type Your e-mail"/>
+                <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="Type Your e-mail" />
+              </div>
+              <div class="mb-4">
+                <label for="transportasi" class="form-label" style="font-family: 'Times New Roman', Times, serif">Choose Payment Method</label><br />
+                <select name="status" id="transportasi">
+                  <option value="pilih">Please select a payment method</option>
+                  <option value="debit">Kartu Debit</option>
+                  <option value="dana">Dana</option>
+                  <option value="m-bangking">m-bangking</option>
+                  <option value="bayarcash">Bayar Di Tempat</option>
+                </select>
               </div>
               <button type="submit" class="btn btn-primary">Send</button>
             </form>
@@ -260,7 +277,7 @@
 
     <!-- Footer -->
     <footer class="bg-primary text-white text-center pb-5">
-      <p>Created by <a href="https//www.instagram.com/iqbalnlhkm/" class="text-white fw-bold">Tim Six Tour & Travel</a></p>
+      <p>Created by <a href="contact.html" class="text-white fw-bold">Tim Six Tour & Travel</a></p>
     </footer>
     <!-- Akhir Footer -->
 
