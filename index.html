@@ -4,36 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Iqbal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.2" defer></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.addEventListener("scroll", function () {
+                let navbar = document.getElementById("navbar");
+                if (window.scrollY > 50) {
+                    navbar.classList.add("bg-white", "shadow-md");
+                } else {
+                    navbar.classList.remove("bg-white", "shadow-md");
+                }
+            });
+        });
+    </script>
 </head>
 <body class="bg-[#F4F1EC] text-gray-800">
-    <nav class="flex justify-between p-4">
-        <ul class="flex space-x-6">
-            <li><a href="#work" class="hover:text-gray-500">Work</a></li>
-            <li><a href="#about" class="hover:text-gray-500">About</a></li>
-            <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
-        </ul>
+    <!-- Sticky Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full p-4 transition duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Iqbal Portfolio</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#work" class="hover:text-gray-500">Work</a></li>
+                <li><a href="#contact" class="hover:text-gray-500">Contact</a></li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- Spasi agar konten tidak tertutup navbar -->
+    <div class="h-16"></div>
 
     <section class="min-h-screen flex items-center justify-center text-center">
         <div>
-            <h1 class="text-6xl font-bold">Hi. I'm Iqbal.<br>A Web Developer.</h1>
+            <h1 class="text-6xl font-bold">Hi. I'm Iqbal.<br>A Software Developer and Security Enthusiast</h1>
             <p class="mt-4 text-xl">I'm passionate about crafting experiences that are engaging, accessible, and user-centric.</p>
         </div>
     </section>
 
     <section id="work" class="p-8">
-        <h2 class="text-4xl font-bold mb-4">Work</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Example of Project Item -->
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
-                <img src="project-image-1.jpg" alt="Project 1" class="w-full h-56 object-cover">
+        <h2 class="text-4xl font-bold mb-4">Project</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Proyek 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition duration-300">
+                <img src="images/Tampilanproyek1.png" alt="Proyek 1" class="w-full h-56 object-cover">
                 <div class="p-4">
-                    <h3 class="text-2xl font-bold">Project Title</h3>
-                    <p class="text-gray-600">Brief description of the project.</p>
+                    <h3 class="text-2xl font-bold">Project 1</h3>
+                    <p class="text-gray-600">Project 1</p>
+                    <a 
+                        href="proyek1.html" 
+                        class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                    >
+                        See the Project
+                    </a>
                 </div>
             </div>
+
+            <!-- Proyek 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition duration-300">
+                <img src="images/Tampilanproyek2.png" alt="Proyek 2" class="w-full h-56 object-cover">
+                <div class="p-4">
+                    <h3 class="text-2xl font-bold">Project 2</h3>
+                    <p class="text-gray-600">Document Project 2</p>
+                    <a 
+                        href="proyek2.html" 
+                        class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
+                    >
+                        See the Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="p-8 bg-white shadow-lg rounded-2xl mt-8">
+        <h2 class="text-4xl font-bold mb-4 text-center">Contact Me</h2>
+        <p class="text-center text-gray-600 mb-6">Silakan hubungi saya melalui email atau media sosial di bawah ini.</p>
+
+        <div class="flex flex-col items-center space-y-4">
+            <a href="mailto:iqbaldwinulhakim@gmail.com" class="text-blue-600 text-lg font-semibold hover:underline">
+                📧 iqbaldwinulhakim@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/iqbal-dwi-nulhakim-0b6572209" target="_blank" class="text-blue-600 text-lg font-semibold hover:underline">
+                🔗 LinkedIn Profile
+            </a>
+            <a href="https://github.com/IqbalDwiNulhakim" target="_blank" class="text-blue-600 text-lg font-semibold hover:underline">
+                🖥 GitHub Profile
+            </a>
         </div>
     </section>
 
