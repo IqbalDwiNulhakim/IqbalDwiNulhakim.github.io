@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { skills, getSkillsByCategory } from "../data/skills";
+import { getSkillsByCategory } from "../data/skills";
 import {
   Code2,
   Server,
@@ -7,9 +7,7 @@ import {
   Cloud,
   Wrench,
   TrendingUp,
-  Brain,
   Database,
-  Users,
 } from "lucide-react";
 
 const Skills = () => {
@@ -51,16 +49,6 @@ const Skills = () => {
       color: "yellow",
     },
   ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },

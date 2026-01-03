@@ -4,13 +4,11 @@ import {
   ExternalLink,
   Github,
   Database,
-  Layout,
   Users,
   Bell,
   FileText,
   Shield,
   CheckCircle,
-  Calendar,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 

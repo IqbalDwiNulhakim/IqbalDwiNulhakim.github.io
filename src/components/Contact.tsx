@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import {
   Mail,
   Linkedin,
-  Github,
   MapPin,
   Phone,
   Send,

@@ -15,12 +15,7 @@ import {
   Star,
   Server,
 } from "lucide-react";
-import {
-  EDUCATION,
-  EXPERIENCES,
-  CERTIFICATIONS,
-  SKILLS,
-} from "../data/constants";
+import { EDUCATION, EXPERIENCES, CERTIFICATIONS } from "../data/constants";
 import { getSkillsByCategory } from "../data/skills";
 
 const Resume = () => {
@@ -31,16 +26,6 @@ const Resume = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
   };
 
   const itemVariants = {

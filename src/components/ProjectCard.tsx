@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Eye, ArrowRight, Star } from "lucide-react";
+import { Github, Eye, ArrowRight, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { Project } from "../types";
 

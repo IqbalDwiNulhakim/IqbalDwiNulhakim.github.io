@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  Target,
-  Award,
   GraduationCap,
   Briefcase,
   BookOpen,
