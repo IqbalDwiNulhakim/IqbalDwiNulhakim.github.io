@@ -13,10 +13,12 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^10.16.4",
     "lucide-react": "^0.309.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pdf": "^10.4.1",
     "react-router-dom": "^6.20.0"
   },
   "devDependencies": {

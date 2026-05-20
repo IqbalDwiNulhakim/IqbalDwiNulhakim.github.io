@@ -68,7 +68,7 @@ export const projects: Project[] = [
       "Platform edukatif komprehensif yang menyediakan berbagai layanan pendidikan dengan website utama React dan LMS terintegrasi.",
     longDescription:
       "Cakrawala Educentre adalah platform pendidikan terpadu yang menyediakan berbagai kebutuhan layanan edukatif. Sistem terdiri dari website utama yang dibangun dengan React untuk presentasi dan informasi lembaga, serta Learning Management System (LMS) berbasis Laravel yang dilengkapi dengan fitur Computer Based Testing (CBT) untuk tryout dan ujian online. Platform ini dirancang untuk memberikan pengalaman belajar yang komprehensif dan interaktif kepada siswa.",
-    image: "/images/Tampilanproyek3.png",
+    image: "/images/projek3.png",
     technologies: [
       "React",
       "TypeScript",

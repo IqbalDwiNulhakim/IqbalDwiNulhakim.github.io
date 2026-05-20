@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -9,7 +9,9 @@ import {
   CheckCircle,
   MessageSquare,
   User,
+  AlertCircle,
 } from "lucide-react";
+import emailjs from "emailjs-com";
 import { SOCIAL_LINKS } from "../data/constants";
 
 const Contact = () => {
@@ -20,22 +22,53 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  // Initialize EmailJS
+  useEffect(() => {
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError("");
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // Send email using EmailJS
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+      if (!serviceId || !templateId) {
+        throw new Error("EmailJS credentials not configured");
+      }
 
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+      const templateParams = {
+        to_email: "iqbaldwinulhakim04@gmail.com",
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        reply_to: formData.email,
+      };
 
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
+      await emailjs.send(serviceId, templateId, templateParams);
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+    } catch (err) {
+      console.error("Failed to send email:", err);
+      setError("Gagal mengirim pesan. Silakan coba lagi nanti.");
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -255,21 +288,30 @@ const Contact = () => {
                     <CheckCircle size={48} />
                   </div>
                   <h4 className="text-2xl font-bold text-gray-900 mb-3">
-                    Message Sent Successfully!
+                    Pesan Terkirim!
                   </h4>
                   <p className="text-gray-600 mb-6">
-                    Thank you for reaching out. I'll review your message and get
-                    back to you within 24 hours.
+                    Terima kasih telah menghubungi saya. Pesan Anda telah dikirim ke email saya dan saya akan meresponnya dalam 24 jam.
                   </p>
                   <button
                     onClick={() => setIsSubmitted(false)}
                     className="btn-ghost px-6 py-3 text-primary-600 hover:text-primary-700"
                   >
-                    Send another message
+                    Kirim pesan lagi
                   </button>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className="flex items-center gap-3 p-4 bg-red-50 text-red-700 rounded-lg border border-red-200"
+                    >
+                      <AlertCircle size={20} />
+                      <p>{error}</p>
+                    </motion.div>
+                  )}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-3">
                       Your Name

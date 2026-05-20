@@ -27,7 +27,7 @@ const Project3 = () => {
   };
   const images = [
     {
-      src: "/images/Tampilanproyek3.png",
+      src: "/images/projek3.png",
       title: "Homepage Cakrawala Educentre",
       description:
         "Website utama dengan presentasi layanan dan informasi lembaga",
