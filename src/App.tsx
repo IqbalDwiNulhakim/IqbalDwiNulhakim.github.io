@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename="">
       <ScrollToTop />
       <div className="min-h-screen bg-white">
         <Navbar />
