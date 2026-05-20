@@ -61,6 +61,37 @@ export const projects: Project[] = [
     detailsLink: "/project2",
     category: "Mobile & AI",
   },
+  {
+    id: 3,
+    title: "Cakrawala Educentre - Platform Pendidikan Terpadu",
+    description:
+      "Platform edukatif komprehensif yang menyediakan berbagai layanan pendidikan dengan website utama React dan LMS terintegrasi.",
+    longDescription:
+      "Cakrawala Educentre adalah platform pendidikan terpadu yang menyediakan berbagai kebutuhan layanan edukatif. Sistem terdiri dari website utama yang dibangun dengan React untuk presentasi dan informasi lembaga, serta Learning Management System (LMS) berbasis Laravel yang dilengkapi dengan fitur Computer Based Testing (CBT) untuk tryout dan ujian online. Platform ini dirancang untuk memberikan pengalaman belajar yang komprehensif dan interaktif kepada siswa.",
+    image: "/images/Tampilanproyek3.png",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Rest API",
+    ],
+    features: [
+      "Website responsif dengan presentasi materi pendidikan",
+      "Learning Management System (LMS) terintegrasi",
+      "Computer Based Testing (CBT) untuk tryout dan ujian",
+      "Dashboard siswa untuk tracking progres belajar",
+      "Manajemen kelas dan penugasan online",
+      "Sistem kehadiran dan nilai terintegrasi",
+      "Komunikasi real-time antara guru dan siswa",
+      "Reportage dan analytics untuk monitor pembelajaran",
+    ],
+    liveLink: "https://cakrawalaeducentre.com",
+    detailsLink: "/project3",
+    category: "Full Stack Web",
+  },
 ];
 
-export const featuredProjects = projects.slice(0, 2);
+export const featuredProjects = projects.slice(0, 3);
